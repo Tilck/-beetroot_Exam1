@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "JosefinSans"; /* Имя шрифта */
+    src: url(../fonts/JosefinSans-Regular.ttf); /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+    font-family: "JosefinSans-Bold"; /* Имя шрифта */
+    src: url(../fonts/JosefinSans-Bold.ttf); /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+    font-family: "Aleo"; /* Имя шрифта */
+    src: url(../fonts/Aleo-Regular.ttf); /* Путь к файлу со шрифтом */
+}
