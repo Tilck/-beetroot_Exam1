@@ -1,0 +1,197 @@
+$main_color: #5474fd;
+@mixin flexPositionCenterX {
+  display: flex;
+  align-items: center;
+}
+@mixin flexPositionCenterY {
+  flex-direction: column;
+  align-self: center;
+}
+@mixin svgSize {
+  width: 20px;
+  height: 20px;
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  &:focus {
+    outline: none;
+  }
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+body {
+  color: #fff;
+  font: 16px "JosefinSans", Arial, "Times New Roman", sans-serif;
+}
+
+.ba-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.ba-header {
+  background: $main_color url("../img/backgrounds/header.jpg") 50% no-repeat;
+  height: 100vh;
+  @include flexPositionCenterX;
+  &__wrapper {
+    @include flexPositionCenterX;
+    @include flexPositionCenterY;
+  }
+  &__title {
+    text-transform: uppercase;
+    font-family: "JosefinSans-Bold";
+    font-size: 48px;
+    letter-spacing: 0.1em;
+  }
+  &__desc {
+    letter-spacing: 0.31em;
+    font-size: 22px;
+  }
+  &__search {
+    margin: 50px 0;
+    width: 650px;
+    height: 60px;
+  }
+  &__scroll {
+    position: absolute;
+    bottom: 15%;
+    margin: 0 auto;
+    width: 95px;
+    text-align: center;
+  }
+}
+
+.ba-search {
+  background: #fff;
+  padding: 2px;
+  &__input {
+    display: block;
+    float: left;
+    width: calc(100% - 150px);
+    height: 100%;
+    text-align: center;
+    letter-spacing: 0.2em;
+    &::placeholder {
+      color: #999;
+    }
+  }
+  &__button {
+    background: $main_color;
+    width: 150px;
+    height: 100%;
+    color: #fff;
+    font: 16px "Aleo", sans-serif;
+    letter-spacing: 0.1em;
+    @include flexPositionCenterX;
+    justify-content: space-evenly;
+    &:hover {
+      opacity: 0.6;
+      cursor: pointer;
+    }
+  }
+  &__svg {
+    @include svgSize;
+    fill: #fff;
+  }
+}
+
+.ba-scroll {
+  text-decoration: none;
+  opacity: 0.6;
+  color: #fff;
+  &:hover { opacity: 1; }
+  &:visited { color: #fff; }
+  &__arrow {
+    width: 26px;
+    fill: #fff;
+  }
+  &__text {
+    margin-bottom: 15px;
+    display: inline-block;
+  }
+}
+
+.ba-nav {
+  background: $main_color;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+  }
+  &__logo {
+    text-transform: uppercase;
+    font-size: 24px;
+    line-height: 80px;
+    font-family: JosefinSans-Bold;
+  }
+  &__mainMenu {
+    @include flexPositionCenterX;
+  }
+}
+
+.mainMenu {
+  list-style-type: none;
+  font-size: 14px;
+  font-family: "Aleo";
+  &__item {
+    display: inline-block;
+    float: left;
+    text-transform: uppercase;
+    margin-right: 40px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.ba-whyChooseUs {
+  background: #373d3e url("../img/backgrounds/whyChooseUs.png") 50% no-repeat;
+}
+
+.ba-block {
+  padding: 120px 0;
+  & > [class ^= "ba-block"] {
+    width: 45%;
+    float: left;
+    &:first-child {
+      margin-right: 10%;
+    }
+  }
+  &__title {
+    font: 36px Aleo, serif;
+    margin: 70px 0;
+  }
+  &__text {
+    letter-spacing: 0.1em;
+    line-height: 1.625em;
+  }
+  &__button {
+    width: 225px;
+    height: 60px;
+    text-transform: uppercase;
+    color: #fff;
+    background: linear-gradient(45deg, #496bfe 40%, $main_color 40%);
+    font-family: Aleo serif;
+    letter-spacing: 0.075em;
+    margin: 40px 0 15px;
+  }
+  &__image {
+    line-height: 0;
+    display: block;
+    width: auto;
+    & :last-child {
+      margin-top: 5px;
+      float: right;
+    }
+  }
+}
